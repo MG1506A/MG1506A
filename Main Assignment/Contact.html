@@ -1,0 +1,340 @@
+<! DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+  .artwork{
+    position:absolute;
+    left:400px;
+    top:20%;
+  }
+  h2{
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size:30px;
+
+  }
+  .icon-bar {
+    width: 50px;
+    padding-top:200px;
+  }
+
+  .icon-bar a {
+    display: block;
+    text-align: centre;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: black;
+    font-size: 20px;
+
+  }
+
+  .icon-bar a:hover {
+    background-color: #757474;
+    border-radius:20px;
+  }
+
+  .active {
+    background-color: #757474;
+    border-radius:20px;
+  }
+
+  .bio{text-align:center;
+  margin-left:230px;
+  margin-right:230px;
+  font-family:"Indie Flower", cursive;
+  font-size:20px}
+
+  ::-webkit-scrollbar{
+    width:0;
+  }
+  #scrollPath
+  {
+    position: fixed;
+    top: 0;
+    right:0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+  }
+  #progressbar
+  {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    animation: animate 5s linear infinite;
+  }
+  @keyframes animate
+  {
+    0%,100%
+    {
+      filter: hue-rotate(0deg);
+    }
+    50%
+    {
+      filter: hue-rotate(360deg);
+    }
+  }
+  #progressbar:before
+  {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    filter: blur(10px);
+  }
+  #progressbar:after
+  {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    filter: blur(10px);
+  }
+.text1{
+  position:absolute;
+  left:200px;
+  top:60%;
+  font-family:"Roboto mono", cursive;
+  font-size:15px;
+}
+.text2{
+  position:absolute;
+  left:1100px;
+  top:60%;
+  font-family:"Roboto mono", cursive;
+  font-size:15px;
+}
+
+.insta{
+  position: absolute;
+  top:1200px;
+  left:200px;
+}
+h1{
+  position:absolute;
+  font-family:'Pacifico', cursive;
+  left:87px;
+}
+.h-tag{
+  position:absolute;
+  left:900px;
+  top:1195px;
+  font-family:'Roboto mono', cursive;
+  font-size:20;
+
+}
+
+.request{
+  position:absolute;
+  left:800px;
+  top:1300px;
+}
+input[type=text]{
+	width: 90%;
+  	padding: 6px 10px;
+  	margin: 4px 0;
+  	border-radius: 4px;
+  	box-sizing: border-box;
+  	border: none;
+	background-color: black;
+	color: white;
+}
+input[type=submit], input[type=reset]{
+	background-color: lightgrey;
+	border: none;
+	color:black;
+	padding:8px 16px;
+	margin: 2px 1px;
+	border-radius: 4px;
+}
+td{
+  font-family:'Roboto mono', cursive;
+
+}
+textarea{
+	width: 90%;
+  	padding: 8px 12px;
+	border-radius: 4px;
+	border: none;
+	background-color: black;
+	color: white;
+
+
+
+
+
+
+
+
+</style>
+
+<script type="text/javascript"></script>
+<script>
+  function login()
+  {
+    var name1 = document.getElementById("fname").value;
+    var name2 = document.getElementById("lname").value;
+    var uname = document.getElementById("email").value;
+    var pnum = document.getElementById("tel").value;
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var number = /^[0-9]+$/;
+
+    if(name1 =='')
+      {
+        alert('Please, enter your first name.');
+    }
+    else if(name2 =='')
+    {
+      alert('Please, enter your last name.');
+  }
+    else if(uname =='')
+    {
+      alert("please enter a valid email address.");
+    }
+    else if(!filter.test(uname))
+    {
+      alert("Enter valid email address.");
+    }
+    else if(pnum=='')
+{
+  alert('Please enter your Phone number.');
+}
+else if(!number.test(pnum))
+{
+  alert('Please enter a valid Phone number.');
+}
+    else
+    {
+  alert('Thank for your registration. We will proceed all your informations and come back to you as soon as possible.');
+
+       window.location = "https://theuselessweb.site/pleasewait/";
+      }
+  }
+</script>
+</head>
+
+
+
+
+
+
+
+
+<body>
+  <div id="progressbar"></div>
+  <div id="scrollPath"></div>
+<h2>Contact</h2>
+
+<div class="icon-bar">
+  <a href="Homepage.html"><i class="fa fa-home"></i></a>
+  <a href="Aboutme.html"><i class="fa fa-user"></i></a>
+  <a class="active" href="Contact.html"><i class="fa fa-at"></i></a>
+  <a href="Portfolio.html"><i class="fa fa-camera-retro"></i></a>
+</div>
+
+<p class="text1">Welcome,<br> to the contact page.<br>Here you can find
+    all<br> links to Mel's social<br> media accounts.</p>
+
+<p class="text2"> Scroll down to find a
+   form<br> where you can order your own<br> peronnalized
+   artwork, ask any<br> question or contact the artist<br> for a collaboration.</p>
+
+  <div class="artwork">
+<img src="C:\Users\user\Desktop\Main Assignment\images\pic9.jpg" width="700" height="900">
+</div><br><br>
+
+<div class="insta">
+    <a href="https://www.instagram.com/keons_creation/">
+  <img src="C:\Users\user\Desktop\Main Assignment\images\pic11.jpg" width="300" height="200">
+  </a>
+  <h1>Instagram<h1>
+</div>
+
+<h1 class="h-tag">Leave your contact information<br> here for any request.</h1>
+
+
+<section class="request">
+<div id="main">
+
+
+<div class="login">
+<table cellspacing="2" align="center" cellpadding="8" border="0">
+
+<tr>
+    <td>First Name </td>
+    <td><input type="text" placeholder="First Name" id="fname" class="tb" /></td>
+</tr>
+
+<tr>
+  <td>Last Name </td>
+  <td><input type="text" placeholder="Last Name" id="lname" class="tb" /></td>
+</tr>
+
+<tr>
+<td>Email Address </td>
+<td><input type="text" placeholder="Email Address" id="email" class="tb" /></td>
+</tr>
+
+<tr>
+<td>Phone Number </td>
+<td><input type="text" placeholder="+230" id="tel" class="tb" /></td>
+</tr>
+
+<tr>
+  <td>Request </td>
+  <td><textarea rows="4" cols = "50" name = "Message">Enter text here...</textarea></td>
+</tr>
+
+
+
+<tr>
+<td></td>
+<td>
+<input type="submit" value="Reset" class="btn" />
+<input type="submit" value="Login" class="btn" onClick="login()" /></td>
+</tr>
+</table>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  let progress = document.getElementById('progressbar');
+  let totalHeight = document.body.scrollHeight -
+  window.innerHeight;
+  window.onscroll = function(){
+    let progressHeight = (window.pageYOffset /
+    totalHeight) * 100;
+    progress.style.height = progressHeight + "%";
+  }
+
+</script>
+  </body>
+  </html>
